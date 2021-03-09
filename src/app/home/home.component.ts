@@ -10,6 +10,7 @@ import {Product} from '../model/product';
 export class HomeComponent implements OnInit {
   title: string;
   list: Product[];
+  priceMax: number;
 
   constructor() {
   }
@@ -25,7 +26,12 @@ export class HomeComponent implements OnInit {
 
   incrementLike(product: Product) {
     product.like++;
+  }
 
+  getColor(p: Product) {
+    if (p.quantity === 0) {
+      return 'red';
+    }
   }
 
 }

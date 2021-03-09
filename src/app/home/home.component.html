@@ -1,14 +1,20 @@
 <h1 xmlns="http://www.w3.org/1999/html">{{ title }}</h1>
+<h1>Search Product</h1>
+<input type="number" name="price" class="form-control" [(ngModel)]="priceMax">
+<br>
 <div class="row">
   <div *ngFor="let p of list">
-  <div class="col-md-3" >
+    <div class="col-md-3" *ngIf="p.price <= priceMax ||priceMax== null">
     <div class="card" style="width: 18rem;">
       <img src="../../assets/img.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
+      <div class="card-body" [style.background-color]="getColor(p)">
         <h5 class="card-title">{{ p.title }}</h5>
         <p class="card-text"> Price: {{p.price}} --- Quantity : {{p.quantity}}</p>
         <button class="btn btn-primary" (click)="incrementLike(p)" >
           like <3 {{p.like}}
+        </button>
+        <button class="btn btn-info" style="float: right" *ngIf="p.quantity!=0">
+          buy
         </button>
       </div>
     </div>
