@@ -1,0 +1,15 @@
+<div class="col-md-3" *ngIf="pChild.price < price || price == null">
+  <div class="card" style="width: 18rem;">
+    <img src="../../assets/img.jpg" class="card-img-top" alt="...">
+    <div class="card-body" [style.background-color]="getColor(pChild)">
+      <h5 class="card-title">{{ pChild.title }}</h5>
+      <p class="card-text"> Price: {{pChild.price}} --- Quantity : {{pChild.quantity}}</p>
+      <button class="btn btn-primary" (click)="incrementLike(pChild)" >
+        like <3 {{pChild.like}}
+      </button>
+      <button class="btn btn-success" style="float: right" *ngIf="pChild.quantity!=0">
+        buy
+      </button>
+    </div>
+  </div>
+</div>

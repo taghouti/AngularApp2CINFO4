@@ -24,14 +24,6 @@ export class HomeComponent implements OnInit {
     ];
   }
 
-  incrementLike(product: Product) {
-    product.like++;
-  }
 
-  getColor(p: Product) {
-    if (p.quantity === 0) {
-      return 'red';
-    }
-  }
 
 }
