@@ -4,7 +4,11 @@
 <br>
 
 <div class="row">
-  <app-product *ngFor="let  p of list" [pChild]="p" [price]="priceMax">
+  <app-product *ngFor="let  p of list" [pChild]="p" [price]="priceMax"
+               (likeEvent)="incrementLike($event)">
 
   </app-product>
 </div>
+
+<hr>
+<app-best-like></app-best-like>

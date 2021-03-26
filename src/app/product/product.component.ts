@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Product} from '../model/product';
 
 @Component({
@@ -9,18 +9,19 @@ import {Product} from '../model/product';
 export class ProductComponent implements OnInit {
   @Input() pChild: Product;
   @Input() price: number;
-  constructor() { }
+  @Output() likeEvent = new EventEmitter<Product>();
 
-  ngOnInit(): void {
-
+  constructor() {
   }
-  incrementLike(product: Product) {
-    product.like++;
+  ngOnInit(): void {
   }
 
   getColor(p: Product) {
     if (p.quantity === 0) {
       return 'red';
     }
+  }
+  sendNotifParent(){
+    this.likeEvent.emit(this.pChild);
   }
 }

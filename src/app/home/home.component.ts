@@ -24,6 +24,9 @@ export class HomeComponent implements OnInit {
     ];
   }
 
+  incrementLike(product: Product) {
+    product.like++;
+  }
 
 
 }

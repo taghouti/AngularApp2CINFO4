@@ -6,13 +6,15 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import {FormsModule} from '@angular/forms';
 import { ProductComponent } from './product/product.component';
+import { BestLikeComponent } from './best-like/best-like.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    ProductComponent
+    ProductComponent,
+    BestLikeComponent
   ],
   imports: [
     BrowserModule,
