@@ -1,14 +1,15 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { HomeComponent } from './home/home.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {AppComponent} from './app.component';
+import {HeaderComponent} from './header/header.component';
+import {HomeComponent} from './home/home.component';
 import {FormsModule} from '@angular/forms';
-import { ProductComponent } from './product/product.component';
-import { BestLikeComponent } from './best-like/best-like.component';
-import { ListActorsComponent } from './list-actors/list-actors.component';
-import { ActorComponent } from './actor/actor.component';
+import {ProductComponent} from './product/product.component';
+import {BestLikeComponent} from './best-like/best-like.component';
+import {ListActorsComponent} from './list-actors/list-actors.component';
+import {ActorComponent} from './actor/actor.component';
+import {NotFoundComponent} from './not-found/not-found.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -18,13 +19,16 @@ import { ActorComponent } from './actor/actor.component';
     ProductComponent,
     BestLikeComponent,
     ListActorsComponent,
-    ActorComponent
+    ActorComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
