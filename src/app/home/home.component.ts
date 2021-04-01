@@ -25,7 +25,8 @@ export class HomeComponent implements OnInit {
   }
 
   incrementLike(product: Product) {
-    product.like++;
+    let i= this.list.indexOf(product);
+    this.list[i].like++;
   }
 
 

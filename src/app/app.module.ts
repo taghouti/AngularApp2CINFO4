@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import {FormsModule} from '@angular/forms';
 import { ProductComponent } from './product/product.component';
 import { BestLikeComponent } from './best-like/best-like.component';
+import { ListActorsComponent } from './list-actors/list-actors.component';
+import { ActorComponent } from './actor/actor.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { BestLikeComponent } from './best-like/best-like.component';
     HeaderComponent,
     HomeComponent,
     ProductComponent,
-    BestLikeComponent
+    BestLikeComponent,
+    ListActorsComponent,
+    ActorComponent
   ],
   imports: [
     BrowserModule,
