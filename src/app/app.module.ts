@@ -10,6 +10,7 @@ import {ListActorsComponent} from './list-actors/list-actors.component';
 import {ActorComponent} from './actor/actor.component';
 import {NotFoundComponent} from './not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FormProductComponent } from './form-product/form-product.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AppRoutingModule } from './app-routing.module';
     BestLikeComponent,
     ListActorsComponent,
     ActorComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    FormProductComponent
   ],
   imports: [
     BrowserModule,

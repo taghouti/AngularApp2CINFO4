@@ -1,7 +1,7 @@
 <h1>Correction Exercice 2: Atelier 3 => Composants imbriqués</h1>
 <div class="row">
-  <app-actor *ngFor="let objectActor of list"
-             [actor]="objectActor">
+ <app-actor *ngFor="let object of list" [actor]="object"
+  (eventDelete)="deleteActor($event)" >
 
-  </app-actor>
-</div>
+ </app-actor>
+</div >

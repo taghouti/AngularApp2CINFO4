@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Actor} from '../model/actors';
 
 @Component({
@@ -8,9 +8,16 @@ import {Actor} from '../model/actors';
 })
 export class ActorComponent implements OnInit {
   @Input() actor: Actor;
-  constructor() { }
+  @Output() eventDelete = new EventEmitter<Actor>();
+
+  constructor() {
+  }
 
   ngOnInit(): void {
+
+  }
+  sendNotifParent() {
+    this.eventDelete.emit(this.actor);
   }
 
 }

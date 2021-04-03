@@ -18,4 +18,9 @@ export class ListActorsComponent implements OnInit {
       {firstName: 'Sofien', lastName: 'Chaari'}
     ];
   }
+
+  deleteActor(actor: Actor) {
+    let i = this.list.indexOf(actor);
+    this.list.splice(i,1);
+  }
 }
