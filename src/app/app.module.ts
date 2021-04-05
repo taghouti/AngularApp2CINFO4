@@ -11,6 +11,7 @@ import {ActorComponent} from './actor/actor.component';
 import {NotFoundComponent} from './not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormProductComponent } from './form-product/form-product.component';
+import { FormActorComponent } from './form-actor/form-actor.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormProductComponent } from './form-product/form-product.component';
     ListActorsComponent,
     ActorComponent,
     NotFoundComponent,
-    FormProductComponent
+    FormProductComponent,
+    FormActorComponent
   ],
   imports: [
     BrowserModule,

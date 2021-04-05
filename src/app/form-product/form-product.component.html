@@ -3,10 +3,13 @@
   <div class="form-group">
     <label>Title:*</label>
     <input type="text" name="title" class="form-control"
-           [(ngModel)]="product.title" required #t="ngModel" minlength="3">
+           [(ngModel)]="product.title" required #t="ngModel"
+           minlength="3" pattern="[a-zA-Z]+$">
     <br>
     <div class="alert alert-danger" *ngIf="t.invalid && t.touched ">
-      title is a required field
+      <div *ngIf="t.errors.required">title is a required field</div>
+      <div *ngIf="t.errors.minlength"> error: minlength is equal to 3</div>
+      <div *ngIf="t.errors.pattern"> error: pattern</div>
     </div>
   </div>
   <div class="form-group">
@@ -14,9 +17,10 @@
     <input type="number" name="price" class="form-control"
            [(ngModel)]="product.price" required #p="ngModel">
     <br>
-    <div class="alert alert-danger" *ngIf="t.invalid && t.touched ">
+    <div class="alert alert-danger" *ngIf="p.invalid && p.touched ">
       price is a required field
     </div>
+
   </div>
   <div class="form-group">
     <label>Quantity:*</label>
@@ -26,8 +30,12 @@
     <div class="alert alert-danger" *ngIf="q.invalid && q.touched ">
       Quantity is a required field
     </div>
+    <div class="alert alert-danger" *ngIf="q.value<0">
+      price is ++++
+    </div>
   </div>
-  <button class="btn btn-success" (click)="save()" [disabled]="f.invalid">
+  <button class="btn btn-success" (click)="notify()" [disabled]="f.invalid || q.value<0">
     Save
   </button>
 </form>
+

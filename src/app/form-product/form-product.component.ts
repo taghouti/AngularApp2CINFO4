@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Product} from '../model/product';
 
 @Component({
@@ -8,7 +8,7 @@ import {Product} from '../model/product';
 })
 export class FormProductComponent implements OnInit {
   product: Product;
-
+  @Output() saveEvent = new EventEmitter<Product>();
   constructor() {
   }
 
@@ -16,7 +16,8 @@ export class FormProductComponent implements OnInit {
     this.product = new Product();
   }
 
-  save() {
-    console.log('hello');
+  notify() {
+
+    this.saveEvent.emit(this.product);
   }
 }
