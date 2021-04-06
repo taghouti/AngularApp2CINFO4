@@ -1,5 +1,8 @@
 <h1 xmlns="http://www.w3.org/1999/html">{{ title }}</h1>
 <h1>Search Product</h1>
+<button (click)="sum()">Calculate</button>
+<p>{{somme}}</p>
+<br>
 <input type="number" name="price" class="form-control" [(ngModel)]="priceMax">
 <br>
 <app-form-product (saveEvent)="save($event)">

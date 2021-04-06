@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Actor} from '../model/actors';
+import {ActorService} from '../services/actor.service';
 
 @Component({
   selector: 'app-list-actors',
@@ -8,19 +9,15 @@ import {Actor} from '../model/actors';
 })
 export class ListActorsComponent implements OnInit {
   list: Actor[];
-
-  constructor() {
+  constructor(private service: ActorService) {
   }
 
   ngOnInit(): void {
-    this.list = [
-      {firstName: 'Ahmed', lastName: 'Zaki'},
-      {firstName: 'Sofien', lastName: 'Chaari'}
-    ];
+    this.list = this.service.list;
   }
 
   deleteActor(actor: Actor) {
     let i = this.list.indexOf(actor);
-    this.list.splice(i,1);
+    this.list.splice(i, 1);
   }
 }

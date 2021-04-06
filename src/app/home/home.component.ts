@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Product} from '../model/product';
+import {CalculateSumService} from '../services/calculate-sum.service';
 
 @Component({
   selector: 'app-home',
@@ -11,8 +12,9 @@ export class HomeComponent implements OnInit {
   title: string;
   list: Product[];
   priceMax: number;
+  somme: number;
 
-  constructor() {
+  constructor(private calculator: CalculateSumService) {
   }
 
   ngOnInit(): void {
@@ -31,6 +33,10 @@ export class HomeComponent implements OnInit {
 
   save(p: Product) {
     this.list.push(p);
+  }
+
+  sum() {
+    this.somme = this.calculator.getBilan(this.list, 'quantity', 0);
   }
 
 }

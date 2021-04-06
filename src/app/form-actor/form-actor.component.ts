@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Actor} from '../model/actors';
+import {ActorService} from '../services/actor.service';
 
 @Component({
   selector: 'app-form-actor',
@@ -8,11 +9,12 @@ import {Actor} from '../model/actors';
 })
 export class FormActorComponent implements OnInit {
   actor: Actor;
-
-  constructor() { }
-
+  constructor(private service: ActorService) { }
   ngOnInit(): void {
     this.actor = new Actor();
+  }
+  save(){
+    this.service.list.push(this.actor);
   }
 
 }
