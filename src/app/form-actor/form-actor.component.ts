@@ -9,12 +9,13 @@ import {ActorService} from '../services/actor.service';
 })
 export class FormActorComponent implements OnInit {
   actor: Actor;
+  list: Actor[];
   constructor(private service: ActorService) { }
   ngOnInit(): void {
     this.actor = new Actor();
   }
   save(){
-    this.service.list.push(this.actor);
+    this.list.push(this.actor);
   }
 
 }

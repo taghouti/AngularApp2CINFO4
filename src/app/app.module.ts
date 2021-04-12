@@ -12,6 +12,7 @@ import {NotFoundComponent} from './not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormProductComponent } from './form-product/form-product.component';
 import { FormActorComponent } from './form-actor/form-actor.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FormActorComponent } from './form-actor/form-actor.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

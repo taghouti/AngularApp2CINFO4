@@ -1,4 +1,6 @@
 export class Actor {
-  firstName: string;
-  lastName: string;
+  id: number;
+  name: string;
+  username: string;
+  email: string;
 }
