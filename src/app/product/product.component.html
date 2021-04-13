@@ -10,6 +10,10 @@
       <button class="btn btn-success" style="float: right" *ngIf="pChild.quantity!=0">
         buy
       </button>
+
+      <button class="btn btn-danger mr-1" style="float: right" (click)="delete()">
+        delete
+      </button>
     </div>
   </div>
 </div>

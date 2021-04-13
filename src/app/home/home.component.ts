@@ -42,12 +42,18 @@ export class HomeComponent implements OnInit {
     p.like = 0;
     this.productService.addProduct(p).subscribe(
       () => this.list = [p, ...this.list]
-  )
+    )
     ;
+  }
+
+  deleteProduct(p: Product) {
+    let i = this.list.indexOf(p);
+    this.productService.delete(p.id).subscribe(() => this.list.splice(i, 1));
   }
 
   sum() {
     this.somme = this.calculator.getBilan(this.list, 'quantity', 0);
   }
+
 
 }
