@@ -1,11 +1,12 @@
 <div>
   <div class="col-md-3">
     <div class="card" style="width: 18rem;">
-      <img src="../../assets/user.png" class="card-img-top" alt="...">
+      <img alt="..." class="card-img-top" src="../../assets/user.png">
       <div class="card-body">
         <h5 class="card-title">{{actor.firstName}}- {{actor.lastName}}</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <button class="btn btn-primary" (click)="sendNotifParent()">Delete</button>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <button (click)="sendNotifParent()" class="btn btn-primary">Delete</button>
       </div>
     </div>
   </div>

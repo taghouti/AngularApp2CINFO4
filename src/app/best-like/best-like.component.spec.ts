@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { BestLikeComponent } from './best-like.component';
+import {BestLikeComponent} from './best-like.component';
 
 describe('BestLikeComponent', () => {
   let component: BestLikeComponent;
@@ -8,9 +8,9 @@ describe('BestLikeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BestLikeComponent ]
+      declarations: [BestLikeComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

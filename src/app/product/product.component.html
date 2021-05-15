@@ -1,17 +1,17 @@
-<div class="col-md-3" *ngIf="pChild.price < price || price == null">
+<div *ngIf="pChild.price < price || price == null" class="col-md-3">
   <div class="card" style="width: 18rem;">
-    <img src="../../assets/img.jpg" class="card-img-top" alt="...">
-    <div class="card-body" [style.background-color]="getColor(pChild)">
+    <img alt="..." class="card-img-top" src="../../assets/img.jpg">
+    <div [style.background-color]="getColor(pChild)" class="card-body">
       <h5 class="card-title">{{ pChild.title }}</h5>
       <p class="card-text"> Price: {{pChild.price}} --- Quantity : {{pChild.quantity}}</p>
-      <button class="btn btn-primary" (click)="sendNotifParent()" >
+      <button (click)="sendNotifParent()" class="btn btn-primary">
         like <3 {{pChild.like}}
       </button>
-      <button class="btn btn-success" style="float: right" *ngIf="pChild.quantity!=0">
+      <button *ngIf="pChild.quantity!=0" class="btn btn-success" style="float: right">
         buy
       </button>
 
-      <button class="btn btn-danger mr-1" style="float: right" (click)="delete()">
+      <button (click)="delete()" class="btn btn-danger mr-1" style="float: right">
         delete
       </button>
     </div>

@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { CalculateSumService } from './calculate-sum.service';
+import {CalculateSumService} from './calculate-sum.service';
 
 describe('CalculateSumService', () => {
   let service: CalculateSumService;

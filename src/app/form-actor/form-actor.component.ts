@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Actor} from '../model/actors';
 import {ActorService} from '../services/actor.service';
 
@@ -10,11 +10,15 @@ import {ActorService} from '../services/actor.service';
 export class FormActorComponent implements OnInit {
   actor: Actor;
   list: Actor[];
-  constructor(private service: ActorService) { }
+
+  constructor(private service: ActorService) {
+  }
+
   ngOnInit(): void {
     this.actor = new Actor();
   }
-  save(){
+
+  save() {
     this.list.push(this.actor);
   }
 

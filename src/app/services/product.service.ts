@@ -10,19 +10,24 @@ export class ProductService {
 
   constructor(private http: HttpClient) {
   }
+
   getAll() {
     return this.http.get<Product[]>(this.url);
   }
+
   addProduct(p: Product) {
     return this.http.post(this.url, p);
   }
+
   delete(id: number) {
     return this.http.delete(this.url + id);
   }
+
   update(id: number, p: Product) {
     return this.http.put(this.url + id, p);
   }
-  serach(id: number){
+
+  serach(id: number) {
     return this.http.get<Product>(this.url + id);
   }
 }

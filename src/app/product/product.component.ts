@@ -1,6 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Product} from '../model/product';
-import {ProductService} from '../services/product.service';
 
 @Component({
   selector: 'app-product',
@@ -12,8 +11,10 @@ export class ProductComponent implements OnInit {
   @Input() price: number;
   @Output() likeEvent = new EventEmitter<Product>();
   @Output() deleteEvent = new EventEmitter<Product>();
+
   constructor() {
   }
+
   ngOnInit(): void {
   }
 
@@ -22,10 +23,12 @@ export class ProductComponent implements OnInit {
       return 'red';
     }
   }
-  sendNotifParent(){
+
+  sendNotifParent() {
     this.likeEvent.emit(this.pChild);
   }
-  delete(){
+
+  delete() {
     this.deleteEvent.emit(this.pChild);
   }
 }

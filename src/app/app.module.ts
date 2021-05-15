@@ -9,9 +9,9 @@ import {BestLikeComponent} from './best-like/best-like.component';
 import {ListActorsComponent} from './list-actors/list-actors.component';
 import {ActorComponent} from './actor/actor.component';
 import {NotFoundComponent} from './not-found/not-found.component';
-import { AppRoutingModule } from './app-routing.module';
-import { FormProductComponent } from './form-product/form-product.component';
-import { FormActorComponent } from './form-actor/form-actor.component';
+import {AppRoutingModule} from './app-routing.module';
+import {FormProductComponent} from './form-product/form-product.component';
+import {FormActorComponent} from './form-actor/form-actor.component';
 import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({

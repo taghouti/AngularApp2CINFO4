@@ -9,6 +9,7 @@ import {Product} from '../model/product';
 export class FormProductComponent implements OnInit {
   product: Product;
   @Output() saveEvent = new EventEmitter<Product>();
+
   constructor() {
   }
 

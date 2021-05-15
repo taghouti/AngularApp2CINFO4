@@ -9,6 +9,7 @@ import {ActorService} from '../services/actor.service';
 })
 export class ListActorsComponent implements OnInit {
   list: Actor[];
+
   constructor(private service: ActorService) {
   }
 

@@ -4,9 +4,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## install Dependency
 
-In order to install dependecies you need to run 'npm install'.
-This command will add the node_modules to the project
+In order to install dependecies you need to run 'npm install'. This command will add the node_modules to the project
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change
+any of the source files.
 

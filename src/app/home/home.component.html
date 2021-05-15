@@ -3,15 +3,15 @@
 <button (click)="sum()">Calculate</button>
 <p>{{somme}}</p>
 <br>
-<input type="number" name="price" class="form-control" [(ngModel)]="priceMax">
+<input [(ngModel)]="priceMax" class="form-control" name="price" type="number">
 <br>
 <app-form-product (saveEvent)="save($event)">
 
 </app-form-product>
 <div class="row">
-  <app-product *ngFor="let  p of list" [pChild]="p" [price]="priceMax"
-               (likeEvent)="incrementLike($event)"
-               (deleteEvent)="deleteProduct($event)">
+  <app-product (deleteEvent)="deleteProduct($event)" (likeEvent)="incrementLike($event)" *ngFor="let  p of list"
+               [pChild]="p"
+               [price]="priceMax">
 
   </app-product>
 </div>
