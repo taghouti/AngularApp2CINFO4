@@ -3,7 +3,9 @@
 <button (click)="sum()">Calculate</button>
 <p>{{somme}}</p>
 <br>
-<input [(ngModel)]="priceMax" class="form-control" name="price" type="number">
+<label>
+  <input [(ngModel)]="priceMax" class="form-control" name="price" type="number">
+</label>
 <br>
 <app-form-product (saveEvent)="save($event)">
 
