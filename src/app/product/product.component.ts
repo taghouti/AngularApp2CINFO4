@@ -24,7 +24,7 @@ export class ProductComponent implements OnInit {
     }
   }
 
-  sendNotifParent() {
+  sendNotifyParent() {
     this.likeEvent.emit(this.pChild);
   }
 

@@ -7,7 +7,7 @@
            placeholder="Enter your Firstname"
            required type="text">
     <div *ngIf="n.invalid && n.touched " class="alert alert-danger">
-      <div *ngIf="n.errors.required">Fistname is a required field</div>
+      <div *ngIf="n.errors.required">Firstname is a required field</div>
       <div *ngIf="n.errors.minlength"> error: minlength is equal to 3</div>
       <div *ngIf="n.errors.pattern"> error: pattern</div>
     </div>
