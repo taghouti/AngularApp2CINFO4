@@ -12,6 +12,7 @@ export class FormActorComponent implements OnInit {
   list: Actor[];
 
   constructor(private service: ActorService) {
+    this.service = service
   }
 
   ngOnInit(): void {

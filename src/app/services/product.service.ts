@@ -26,8 +26,4 @@ export class ProductService {
   update(id: number, p: Product) {
     return this.http.put(this.url + id, p);
   }
-
-  serach(id: number) {
-    return this.http.get<Product>(this.url + id);
-  }
 }

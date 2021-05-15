@@ -4,7 +4,7 @@
     <div [style.background-color]="getColor(pChild)" class="card-body">
       <h5 class="card-title">{{ pChild.title }}</h5>
       <p class="card-text"> Price: {{pChild.price}} --- Quantity : {{pChild.quantity}}</p>
-      <button (click)="sendNotifParent()" class="btn btn-primary">
+      <button (click)="sendNotifyParent()" class="btn btn-primary">
         like <3 {{pChild.like}}
       </button>
       <button *ngIf="pChild.quantity!=0" class="btn btn-success" style="float: right">

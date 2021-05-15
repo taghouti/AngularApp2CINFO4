@@ -20,7 +20,7 @@ export class ActorComponent implements OnInit {
       this.list = data);
   }
 
-  sendNotifParent() {
+  sendNotifyParent() {
     this.eventDelete.emit(this.actor);
   }
 

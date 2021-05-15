@@ -14,7 +14,11 @@ export class ListActorsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.list = this.service.list;
+    this.service.getAll().forEach(function (actor: Actor[]) {
+      this.list.push(actor);
+    }, undefined).then(r => function() {
+      console.log(r)
+    });
   }
 
   deleteActor(actor: Actor) {

@@ -1,10 +1,10 @@
-# AngularApp
+# angular_app
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.12.
 
 ## install Dependency
 
-In order to install dependecies you need to run 'npm install'. This command will add the node_modules to the project
+In order to install dependencies you need to run 'npm install'. This command will add the node_modules to the project
 
 ## Development server
 
