@@ -3,4 +3,6 @@ export class Actor {
   name: string;
   username: string;
   email: string;
+  firstName: string;
+  lastName: string;
 }
